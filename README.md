@@ -1,4 +1,4 @@
-Login Page in C
+Login Page created through C programming language
 This repository features a Login Page project built using the C programming language, designed to demonstrate basic user authentication in a console-based environment. It is an ideal example for beginners to learn about user registration, file handling, and implementing secure login systems in C.
 
 Project Overview
