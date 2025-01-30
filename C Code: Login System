@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <string.h>
+
+#define FILE_NAME "users.txt"
+
+void registerUser() {
+    char username[50], password[50];
+    FILE *file = fopen(FILE_NAME, "a");
+
+    if (file == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    printf("Enter username: ");
+    scanf("%s", username);
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    fprintf(file, "%s %s\n", username, password);
+    fclose(file);
+
+    printf("Registration successful!\n");
+}
+
+int loginUser() {
+    char username[50], password[50], storedUser[50], storedPass[50];
+    FILE *file = fopen(FILE_NAME, "r");
+
+    if (file == NULL) {
+        printf("No registered users found! Please register first.\n");
+        return 0;
+    }
+
+    printf("Enter username: ");
+    scanf("%s", username);
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    while (fscanf(file, "%s %s", storedUser, storedPass) != EOF) {
+        if (strcmp(username, storedUser) == 0 && strcmp(password, storedPass) == 0) {
+            fclose(file);
+            return 1; // Login successful
+        }
+    }
+
+    fclose(file);
+    return 0; // Login failed
+}
+
+int main() {
+    int choice;
+    
+    printf("1. Register\n2. Login\nChoose an option: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        registerUser();
+    } else if (choice == 2) {
+        if (loginUser()) {
+            printf("Login successful! Welcome.\n");
+        } else {
+            printf("Invalid username or password.\n");
+        }
+    } else {
+        printf("Invalid choice.\n");
+    }
+
+    return 0;
+}
