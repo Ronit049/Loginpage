@@ -48,5 +48,46 @@ Upgrade to a graphical user interface (GUI) for a more user-friendly experience.
 Contribution
 Contributions are welcome! Feel free to fork this repository, create a branch, and submit a pull request with your improvements or suggestions.
 
+
+
+
+
+
+Steps to Upload on GitHub:
+Initialize Git Repository
+
+Open Git Bash or Command Prompt in your project folder.
+Run these commands:
+sh
+Copy
+Edit
+git init
+git add login.c
+git commit -m "Initial commit: Added login system"
+Create a GitHub Repository
+
+Go to GitHub and create a new repository (e.g., C-Login-System).
+Copy the repository URL.
+Push Code to GitHub
+
+Run these commands:
+sh
+Copy
+Edit
+git remote add origin <your-repository-url>
+git branch -M main
+git push -u origin main
+3. Run the Program
+To run the C program, use:
+
+sh
+Copy
+Edit
+gcc login.c -o login
+./login
+Next Steps
+Add password encryption using hashing (e.g., SHA256).
+Implement forgot password feature.
+Improve UI with a menu-driven approach.
 License
 This project is licensed under the MIT License.
