@@ -1,3 +1,48 @@
+C Login System
+
+This is a simple C-based Login System that verifies a predefined username and password.
+
+Folder Structure
+
+LoginSystem/             # Main project folder
+│-- login.c             # C program file (contains the login logic)
+│-- README.md           # Project details and usage instructions
+│-- .gitignore          # Git ignore file (optional)
+
+How It Works
+
+The program asks the user for a username and password.
+
+It checks the input against predefined credentials.
+
+If the input matches, it prints "Login Successful!", otherwise, it prints "Invalid Credentials.".
+
+How to Use
+
+Clone the Repository (if using GitHub):
+
+git clone https://github.com/yourusername/LoginSystem.git
+cd LoginSystem
+
+Compile the Program:
+
+gcc login.c -o login
+
+Run the Program:
+
+./login
+
+Future Improvements
+
+Implement user registration.
+
+Store user credentials in a file or database.
+
+Add a password encryption mechanism for security.
+
+License
+
+This project is open-source and free to use.
 Login Page created through C programming language
 This repository features a Login Page project built using the C programming language, designed to demonstrate basic user authentication in a console-based environment. It is an ideal example for beginners to learn about user registration, file handling, and implementing secure login systems in C.
 
